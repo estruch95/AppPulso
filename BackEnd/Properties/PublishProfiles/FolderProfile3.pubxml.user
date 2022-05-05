@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <History>True|2021-10-25T07:22:13.1886000Z;True|2021-10-25T09:19:20.0830002+02:00;False|2021-10-25T09:17:30.8028247+02:00;</History>
+    <_PublishTargetUrl>C:\Users\servidores\Desktop\Publicados\WebApiCocina</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

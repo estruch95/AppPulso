@@ -1,0 +1,31 @@
+[
+  {
+    "Id": 1,
+    "nombre": "Daredevil",
+    "img": "assets/img/daredevil.png",
+    "aparicion": "1964-01-01"
+
+  },
+  {
+    "Id": 2,
+    "nombre": "Hulk",
+    "img": "assets/img/hulk.png",
+    "aparicion": "1962-05-01"
+
+  },
+  {
+    "Id": 3,
+    "nombre": "Spider-Man",
+    "img": "assets/img/spiderman.png",
+    "aparicion": "1962-08-01"
+
+  },
+  {
+    "Id": 4,
+    "nombre": "Wolverine",
+    "img": "assets/img/wolverine.png",
+    "aparicion": "1974-11-01"
+
+  }
+]
+

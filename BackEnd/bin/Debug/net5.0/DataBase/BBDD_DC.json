@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "nombre": "Aquaman",
+    "img": "assets/img/aquaman.png",
+    "aparicion": "1941-11-01"
+  },
+  {
+    "Id": 2,
+    "nombre": "Batman",
+    "img": "assets/img/batman.png",
+    "aparicion": "1939-05-01"
+  },
+  {
+    "Id": 3,
+    "nombre": "Linterna Verde",
+    "img": "assets/img/linterna-verde.png",
+    "aparicion": "1940-06-01"
+  }
+]
