@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <br>
+        <div class="card shadow">
+            <div class="card-header bg-dark text-light text-center">
+                Iniciar sesión en PulsoApp
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label class="form-label">Usuario <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control shadow" name="user" formControlName="user" required>
+                        <!-- VALIDACIÓN DE CAMPO MEDIANTE VALIDATORS EN FORMULARIOS REACTIVOS -->
+                        
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Contraseña <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control shadow" name="password" formControlName="password" required>
+                         <!-- VALIDACIÓN DE CAMPO MEDIANTE VALIDATORS EN FORMULARIOS REACTIVOS -->
+                         
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-dark shadow" type="submit">Iniciar sesión</button>
+                    </div>
+                    <small class="form-text text-muted">¿No estás registrado en PulsoApp?</small><small> -> <a href="#"> Registrarme en un momento</a></small>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+</div>

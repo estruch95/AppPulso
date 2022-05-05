@@ -1,0 +1,9 @@
+li:hover {
+    background-color: darkorange;
+    cursor: default;
+}
+
+tr:hover {
+    background-color: darkorange;
+    cursor: default;
+}

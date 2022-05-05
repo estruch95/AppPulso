@@ -1,0 +1,69 @@
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-4">
+            <h3>Opciones de búsqueda</h3>
+            <hr>
+            <ul class="list-group shadow">
+                <li class="list-group-item" (click)="onSearch(1)"> <span class="fw-bold">1</span> - Buscar héroe de casa concreta </li>
+                <li class="list-group-item" (click)="onSearch(2)"><span class="fw-bold">2</span> - Buscar héroe específico </li>
+                <li class="list-group-item" (click)="onSearch(3)"><span class="fw-bold">3</span> - Mostrar héroes de casa concreta </li>
+                <li class="list-group-item" (click)="onSearch(4)"><span class="fw-bold">4</span> - Mostrar todos héroes </li>
+            </ul>
+
+            <br>
+            <hr>
+            <br>
+
+            <div class="d-flex align-items-center mb-3" *ngIf="querySelection == 2">
+                <label for="" class="form-label">Id:</label>
+                <input type="number" class="form-control ms-3" id="id" placeholder="Introduce el Id del héroe a buscar" [(ngModel)]="heroeId">
+                <button type="button" class="btn btn-success ms-3" [disabled]="!heroeId" (click)="buscarHeroe(heroeId)">Buscar</button>
+            </div>
+
+            <div class="d-flex align-items-center mb-3" *ngIf="querySelection == 3">
+                <label for="" class="form-label">Casa:</label>
+                <input type="text" class="form-control ms-3" id="id" placeholder="Introduce la casa del héroe a buscar" [(ngModel)]="heroeBBDD">
+                <button type="button" class="btn btn-success ms-3" [disabled]="!heroeBBDD" (click)="buscarHeroesDeCasa(heroeBBDD)">Buscar</button>
+            </div>
+
+            <div class="d-flex align-items-center mb-3" *ngIf="querySelection == 1">
+                <label for="" class="form-label">Casa:</label>
+                <input type="text" class="form-control ms-3" id="id" placeholder="Introduce la casa del héroe a buscar" [(ngModel)]="heroeBBDD">
+            </div>
+
+            <div class="d-flex align-items-center mb-3" *ngIf="querySelection == 1">
+                <label for="" class="form-label">Nombre:</label>
+                <input type="text" class="form-control ms-3" id="id" placeholder="Introduce el nombre del héroe a buscar" [(ngModel)]="heroeName">
+            </div>
+
+            <div class="d-grid">
+                <button type="button" class="btn btn-success ms-3" [disabled]="!heroeName || !heroeBBDD" (click)="buscarHeroeDeCasa(heroeBBDD, heroeName)" *ngIf="querySelection == 1">Buscar</button>
+            </div>
+        </div>
+        <div class="col-8">
+            <h3>Resultados de la búsqueda de héroes</h3>
+            <hr>
+            <table class="table table-striped mt-3 shadow">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nombre</td>
+                        <td>Imagen</td>
+                        <td>Aparición</td>
+                        <td *ngIf="querySelection == 4">Casa</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let heroe of result">
+                        <td>{{heroe.id}}</td>
+                        <td>{{heroe.nombre}}</td>
+                        <td>{{ heroe.imagen? heroe.imagen : 'Sin datos' }}</td>
+                        <td>{{heroe.fecha_aparicion | date: 'dd/MM/yyyy'}}</td>
+                        <td *ngIf="querySelection == 4">{{heroe.bbdd}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
